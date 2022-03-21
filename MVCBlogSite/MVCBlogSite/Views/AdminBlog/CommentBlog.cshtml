@@ -1,0 +1,13 @@
+﻿@using Varliklar.Somut
+@model List<Comment>
+@{
+    ViewBag.Title = "CommentBlog";
+    Layout = "~/Views/Shared/_Panel.cshtml";
+}
+<div class="invoice overflow-auto">
+    <div style="min-width: 600px">
+        @Html.Action("CommentBlogHead")
+        @Html.Action("CommentBlogTable")
+        <footer>You Can See All Comments To This Window.</footer>
+    </div>
+</div>

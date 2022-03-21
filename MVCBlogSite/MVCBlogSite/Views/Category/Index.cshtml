@@ -1,0 +1,36 @@
+﻿@using Varliklar.Somut
+@model List<Category>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Panel.cshtml";
+}
+<br />
+<h2 style="text-align:center;color:orange">List Of Category</h2>
+<br />
+<br />
+<div style="margin:45px">
+    <table class="table table-hover">
+        <tr style="color:green">
+            <th>
+                Category ID
+            </th>
+            <th>
+                Category Name
+            </th>
+        </tr>
+        @foreach (var i in Model)
+        {
+            <tr style="color:deeppink">
+                <td>
+                    @i.CategoryID
+                </td>
+                <td>
+                    @i.CategoryName
+                </td>
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="~/Category/NewCategory" class="btn btn-warning">Add New Category</a>
+</div>
+

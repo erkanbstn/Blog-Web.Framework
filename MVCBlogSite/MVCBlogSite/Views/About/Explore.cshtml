@@ -1,0 +1,25 @@
+﻿@using Varliklar.Somut
+@model List<About>
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row">
+            @foreach (var i in Model)
+            {
+                <div class="col-md-6 order-md-2">
+                    <img src="~/MiniBlog/images/@i.AboutImage1" alt="Image" class="img-fluid">
+                </div>
+                <div class="col-md-5 mr-auto order-md-1">
+                    <h2>We Love To Explore</h2>
+
+                    <p> @i.AboutContent</p>
+
+                    <ul class="ul-check list-unstyled success">
+                        <li>SOLID Prensiplerine Uygun Tasarlandı</li>
+                        <li>Entity Framework ve LİNQ Kullanıldı</li>
+                        <li>Sayfalama ve Authentication İşlemleri Kullanıldı</li>
+                    </ul>
+                </div>
+            }
+        </div>
+    </div>
+</div>

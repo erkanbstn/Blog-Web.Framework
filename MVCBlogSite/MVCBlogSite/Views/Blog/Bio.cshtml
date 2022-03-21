@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Varliklar.Somut.Author>
+@foreach (var i in Model)
+{
+    <div class="sidebar-box">
+        <div class="bio text-center">
+            <img src="~/MiniBlog/images/@i.AuthorImage" alt="Image Placeholder" class="img-fluid mb-5">
+            <div class="bio-body">
+                <h2>@i.AuthorName</h2>
+                <p class="mb-4">@i.AuthorAbout.</p>
+                <p><a href="~/Blog/AuthorBlog/@i.AuthorID" class="btn btn-primary btn-sm rounded px-4 py-2">Read My Bio</a></p>
+                <p class="social">
+                    <a href="#" class="p-2"><span class="fa fa-facebook"></span></a>
+                    <a href="#" class="p-2"><span class="fa fa-twitter"></span></a>
+                    <a href="#" class="p-2"><span class="fa fa-instagram"></span></a>
+                    <a href="#" class="p-2"><span class="fa fa-youtube-play"></span></a>
+                </p>
+            </div>
+        </div>
+    </div>
+}

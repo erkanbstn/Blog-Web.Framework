@@ -1,0 +1,16 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+@Html.Action("Head", "VitrinPartial")
+<body>
+    <div class="site-wrap">
+        @Html.Action("Header", "VitrinPartial")
+        @RenderBody()
+        @Html.Action("Footer", "VitrinPartial")
+    </div>
+    @Html.Action("Script", "VitrinPartial")
+</body>
+</html>

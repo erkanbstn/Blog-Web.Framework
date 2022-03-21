@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "BlogByCategory";
+    Layout = "~/Views/Shared/_Vitrin.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div class="site-wrap">
+        @Html.Action("BlogByCategoryHead")
+        <div class="site-section bg-white">
+            <div class="container">
+                <div class="row">
+                    @Html.Action("BlogByCategoryContent")
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿@model Varliklar.Somut.About
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Panel.cshtml";
+}
+<h2>Update About</h2>
+<div class="card radius-10">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <div>
+                <h5 class="mb-0">Update About</h5>
+            </div>
+            <div class="font-22 ms-auto">
+                <i class="bx bx-dots-horizontal-rounded"></i>
+            </div>
+
+        </div>
+        <hr>
+        @using (Html.BeginForm("UpdateAbout", "AdminAbout", FormMethod.Post))
+        {
+            @Html.TextBoxFor(b => b.AboutID, new { @type = "hidden" })
+            <label>About Content</label>
+            <br />
+            <br />
+            @Html.TextBoxFor(b => b.AboutContent, new { @class = "form-control", placeholder = "Enter About Content", required = "required" })
+            <br />
+            <label>About Content 2</label>
+            <br />
+            <br />
+            @Html.TextBoxFor(b => b.AboutContent2, new { @class = "form-control", placeholder = "Enter About Content2", required = "required" })
+            <br />
+            <input type="submit" value="Save About" class="btn btn-primary" />
+        }
+
+    </div>
+</div>
+
+
+

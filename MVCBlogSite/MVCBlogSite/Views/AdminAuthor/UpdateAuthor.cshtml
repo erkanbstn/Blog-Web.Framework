@@ -1,0 +1,40 @@
+﻿@model Varliklar.Somut.Author
+@{
+    ViewBag.Title = "UpdateAuthor";
+    Layout = "~/Views/Shared/_Panel.cshtml";
+}
+
+
+<h2>Update Author</h2>
+<div class="card radius-10">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <div>
+                <h5 class="mb-0">Update This Blog</h5>
+            </div>
+            <div class="font-22 ms-auto">
+                <i class="bx bx-dots-horizontal-rounded"></i>
+            </div>
+
+        </div>
+        <hr>
+        @using (Html.BeginForm("UpdateAuthor", "AdminAuthor", FormMethod.Post))
+        {
+            @Html.TextBoxFor(n=>n.AuthorImage,new {@type="hidden" })
+            @Html.TextBoxFor(b => b.AuthorID, new { @type = "hidden" })
+            <label>Author Name</label>
+            <br />
+            <br />
+            @Html.TextBoxFor(b => b.AuthorName, new { @class = "form-control", placeholder = "Enter Author Name", required = "required" })
+            <br />
+            <label>Author About</label>
+            <br />
+            <br />
+            @Html.TextAreaFor(b => b.AuthorAbout, 3, 6, new { @class = "form-control", placeholder = "Enter Author About", required = "required" })
+            <br />
+            <input type="submit" value="Update Author" class="btn btn-primary" />
+        }
+
+    </div>
+</div>
+

@@ -1,0 +1,65 @@
+﻿@using Varliklar.Somut
+@model List<Blog>
+@{
+    ViewBag.Title = "Bloglarim";
+    Layout = "~/Views/Shared/AuthorLayout.cshtml";
+}
+
+<div class="card radius-10">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <div>
+                <h5 class="mb-0">Bloglar</h5>
+            </div>
+            <div class="font-22 ms-auto">
+                <i class="bx bx-dots-horizontal-rounded"></i>
+            </div>
+        </div>
+        <hr>
+        <div class="table-responsive">
+            <table class="table align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Blog ID</th>
+                        <th>Blog Title</th>
+                        <th>Blog Date</th>
+                        <th>Category</th>
+                        <th>Author</th>
+                        <th>Delete Action</th>
+                        <th>Update Action</th>
+                        <th>Comment Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var i in Model)
+                    {
+                        <tr>
+                            <td>@i.BlogID</td>
+                            <td>@i.BlogTitle</td>
+                            <td>@Convert.ToDateTime(i.BlogDate).ToString("dd/MMMM/yyyy")</td>
+                            <td>@i.Category.CategoryName</td>
+                            <td>@i.Author.AuthorName</td>
+                            <td>
+                                <div class="btn btn-warning">
+                                    <a href="~/AuthorPanel/DeleteBlog/@i.BlogID">D</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn btn-success">
+                                    <a href="~/AuthorPanel/UpdateBlog/@i.BlogID">U</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn btn-secondary">
+                                    <a href="~/AuthorPanel/BlogComments/@i.BlogID">C</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <br />
+            <a href="~/AdminBlog/NewBlog" class="btn btn-info">Add New BLog</a>
+        </div>
+    </div>
+</div>

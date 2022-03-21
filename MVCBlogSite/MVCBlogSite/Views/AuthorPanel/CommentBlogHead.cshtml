@@ -1,0 +1,23 @@
+﻿@using Varliklar.Somut
+@model List<Author>
+<header>
+    <div class="row">
+
+        <div class="col">
+            <a href="javascript:;">
+                <img src="~/CssDashBoard/dashtreme/vertical/assets/images/logo-icon.png" width="80" alt="" />
+            </a>
+        </div>
+        @foreach (var i in Model)
+        {
+            <div class="col company-details">
+                <h2 class="name">
+                    Blog By @i.AuthorName
+                </h2>
+                <div> <u>@i.AuthorAbout</u></div>
+            </div>
+        }
+
+    </div>
+</header>
+

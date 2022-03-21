@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Vitrin.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="site-wrap">
+        @Html.Action("ContactHead")
+        <div class="site-section bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 mb-5">
+
+                        @if (ViewBag.mesaj != null)
+                        {
+                            <div class="alert alert-success">@ViewBag.mesaj</div>
+                        }
+
+                        @using (Html.BeginForm("Index", "Contact", FormMethod.Post))
+                        {
+
+                            <div class="row form-group">
+                                <div class="col-md-6 mb-3 mb-md-0">
+                                    <label class="text-black" for="fname">First Name</label>
+                                    <input type="text" name="Name" class="form-control">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="text-black" for="lname">Last Name</label>
+                                    <input type="text" name="SurName" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+
+                                <div class="col-md-12">
+                                    <label class="text-black" for="subject">Subject</label>
+                                    <input type="text" name="Subject" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <label class="text-black" for="message">Message</label>
+                                    <textarea name="Message" cols="30" rows="7" class="form-control" placeholder="Sorularınız veya İsteklerinizi Buraya Belirtebilirsiniz..."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <input type="submit" value="Send Message" class="btn btn-primary py-2 px-4 text-white">
+                                </div>
+                            </div>
+                        }
+
+
+
+
+
+
+                    </div>
+                    @Html.Action("ContactDetail")
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

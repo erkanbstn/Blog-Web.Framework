@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Varliklar.Somut.Author>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Panel.cshtml";
+}
+
+<h6 class="mb-0 text-uppercase">Light Contact List</h6>
+<hr />
+<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-4">
+
+
+
+    @foreach (var i in Model)
+    {
+        <div class="col">
+            <div class="card radius-15">
+                <div class="card-body text-center">
+                    <div class="p-4 border radius-15">
+                        <img src="~/MiniBlog/images/@i.AuthorImage" width="110" height="110" class="rounded-circle shadow" alt="">
+                        <h5 class="mb-0 mt-5">@i.AuthorName</h5>
+                        <p class="mb-3">@i.AuthorAbout</p>
+                        <div class="list-inline contacts-social mt-3 mb-3">
+                            <a href="https://www.facebook.com/erkanbstn" class="list-inline-item bg-light text-white border-0"><i class="bx bxl-facebook"></i></a>
+                            <a href="https://github.com/erkanbstn" class="list-inline-item bg-light text-white border-0"><i class="bx bxl-github"></i></a>
+                            <a href="https://www.instagram.com/erkanbssn/" class="list-inline-item bg-light text-white border-0"><i class="bx bxl-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/erkan-bostan-11257a210/" class="list-inline-item bg-light text-white border-0"><i class="bx bxl-linkedin"></i></a>
+                        </div>
+                        <div class="d-grid">
+                            <a href="~/AdminAuthor/UpdateAuthor/@i.AuthorID" class="btn btn-light radius-15">Update</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+
+
+</div>

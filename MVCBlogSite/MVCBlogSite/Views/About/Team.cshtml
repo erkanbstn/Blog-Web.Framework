@@ -1,0 +1,31 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model IEnumerable<Varliklar.Somut.Author>
+
+<div class="site-section">
+    <div class="container">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-md-5 text-center">
+                <h2>Meet The Team</h2>
+                <p>Yazarlarımızla Tanışmaya ve Onların Bloglarına Katılmaya Hazır mısınız ?</p>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var i in Model)
+            {
+                <div class="col-md-6 col-lg-4 mb-5 text-center">
+                    <img src="~/MiniBlog/images/@i.AuthorImage" alt="Image" class="img-fluid w-50 rounded-circle mb-4">
+                    <h2 class="mb-3 h5">@i.AuthorName</h2>
+                    <p>@i.AuthorAbout</p>
+
+                    <p class="mt-5">
+                        <a href="https://www.linkedin.com/in/erkan-bostan-11257a210/" class="p-3"><span class="icon-linkedin"></span></a>
+                        <a href="https://www.instagram.com/erkanbssn/" class="p-3"><span class="icon-instagram"></span></a>
+                        <a href="https://github.com/erkanbstn" class="p-3"><span class="icon-github"></span></a>
+                    </p>
+                </div>
+            }
+            @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+C:\Users\profe\Desktop\VisualProjects\DevamEdenProjeler\MVCBlogSite\Varliklar\bin\Debug\Varliklar.dll.config
+C:\Users\profe\Desktop\VisualProjects\DevamEdenProjeler\MVCBlogSite\Varliklar\bin\Debug\Varliklar.dll
+C:\Users\profe\Desktop\VisualProjects\DevamEdenProjeler\MVCBlogSite\Varliklar\bin\Debug\Varliklar.pdb
+C:\Users\profe\Desktop\VisualProjects\DevamEdenProjeler\MVCBlogSite\Varliklar\bin\Debug\EntityFramework.dll
+C:\Users\profe\Desktop\VisualProjects\DevamEdenProjeler\MVCBlogSite\Varliklar\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\profe\Desktop\VisualProjects\DevamEdenProjeler\MVCBlogSite\Varliklar\bin\Debug\EntityFramework.xml
+C:\Users\profe\Desktop\VisualProjects\DevamEdenProjeler\MVCBlogSite\Varliklar\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\profe\Desktop\VisualProjects\DevamEdenProjeler\MVCBlogSite\Varliklar\obj\Debug\Varliklar.csproj.CoreCompileInputs.cache
+C:\Users\profe\Desktop\VisualProjects\DevamEdenProjeler\MVCBlogSite\Varliklar\obj\Debug\Varliklar.csproj.CopyComplete
+C:\Users\profe\Desktop\VisualProjects\DevamEdenProjeler\MVCBlogSite\Varliklar\obj\Debug\Varliklar.dll
+C:\Users\profe\Desktop\VisualProjects\DevamEdenProjeler\MVCBlogSite\Varliklar\obj\Debug\Varliklar.pdb
+C:\Users\profe\Desktop\VisualProjects\DevamEdenProjeler\MVCBlogSite\Varliklar\obj\Debug\Varliklar.csproj.AssemblyReference.cache

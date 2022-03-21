@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Varliklar.Somut.Comment>
+
+<main>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th class="text-left">USERNAME</th>
+                <th class="text-right">MAİL</th>
+                <th class="text-right">COMMENT TEXT</th>
+                <th class="text-right">COMMENT DATE</th>
+                <th class="text-right">DELETE ACTION</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var i in Model)
+            {
+                <tr>
+                    <td>@i.CommentID</td>
+                    <td>@i.UserName</td>
+                    <td>@i.Mail</td>
+                    <td>@i.CommentText</td>
+                    <td>@Convert.ToDateTime(i.CommentDate).ToString("dd/MMMM/yyyy")</td>
+                    <td><a href="~/AdminBlog/DeleteComment/@i.CommentID" class="btn btn-danger">D</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</main>
+

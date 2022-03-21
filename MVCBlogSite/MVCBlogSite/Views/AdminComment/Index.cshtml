@@ -1,0 +1,52 @@
+﻿@using Varliklar.Somut
+@model List<Comment>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Panel.cshtml";
+}
+
+<div class="card radius-10">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <div>
+                <h5 class="mb-0">Yorumlar</h5>
+            </div>
+            <div class="font-22 ms-auto">
+                <i class="bx bx-dots-horizontal-rounded"></i>
+            </div>
+        </div>
+        <hr>
+        <div class="table-responsive">
+            <table class="table align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Comment ID</th>
+                        <th>Comment User</th>
+                        <th>Comment Mail</th>
+                        <th>Comment Text</th>
+                        <th>Comment Blog</th>
+                        <th>Delete Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var i in Model)
+                    {
+                        <tr>
+                            <td>@i.CommentID </td>
+                            <td>@i.UserName</td>
+                            <td>@i.Mail</td>
+                            <td>@i.CommentText</td>
+                            <td>@i.Blogs.Author.AuthorName</td>
+                            <td>
+                                <div class="btn btn-warning">
+                                    <a href="~/AdminComment/DeleteComment/@i.CommentID">D</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

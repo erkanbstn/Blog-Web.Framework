@@ -1,0 +1,43 @@
+﻿@model Varliklar.Somut.Author
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AuthorLayout.cshtml";
+}
+
+<h2>Update Author</h2>
+<div class="card radius-10">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <div>
+                <h5 class="mb-0">Update Author</h5>
+            </div>
+            <div class="font-22 ms-auto">
+                <i class="bx bx-dots-horizontal-rounded"></i>
+            </div>
+        </div>
+        <hr>
+        @using (Html.BeginForm("Index", "AuthorPanel", FormMethod.Post))
+        {
+            @Html.TextBoxFor(b => b.AuthorID, new { @type = "hidden" })
+            <label>Author Name</label>
+            <br />
+            <br />
+            @Html.TextBoxFor(b => b.AuthorName, new { @class = "form-control", placeholder = "Enter About Content", required = "required" })
+            <br />
+            <label>Author Password</label>
+            <br />
+            <br />
+            @Html.TextBoxFor(b => b.AuthorPassword, new { @class = "form-control", placeholder = "Enter About Content2", required = "required" })
+            <br />
+            <label>Author About</label>
+            <br />
+            <br />
+            @Html.TextAreaFor(b => b.AuthorAbout, 3, 6, new { @class = "form-control", placeholder = "Enter About Content2", required = "required" })
+            <br />
+            <input type="submit" value="Save Profile" class="btn btn-primary" />
+        }
+
+    </div>
+</div>
+

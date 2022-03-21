@@ -1,0 +1,11 @@
+﻿@using Varliklar.Somut
+@model List<Category>
+<div class="sidebar-box">
+    <h3 class="heading">Categories</h3>
+    <ul class="categories">
+        @foreach (var i in Model)
+        {
+            <li><a href="~/Blog/BlogByCategories/@i.CategoryID">@i.CategoryName<span>27</span></a></li>
+        }
+    </ul>
+</div>

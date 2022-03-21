@@ -1,0 +1,46 @@
+﻿@model Varliklar.Somut.Blog
+@{
+    ViewBag.Title = "NewBlog";
+    Layout = "~/Views/Shared/_Panel.cshtml";
+}
+
+<h2>New Blog</h2>
+<div class="card radius-10">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <div>
+                <h5 class="mb-0">Add New Blog</h5>
+            </div>
+            <div class="font-22 ms-auto">
+                <i class="bx bx-dots-horizontal-rounded"></i>
+            </div>
+
+        </div>
+        <hr>
+        @using (Html.BeginForm("NewBlog", "AdminBlog", FormMethod.Post))
+        {
+            <label>Blog Title</label>
+            <br />
+            <br />
+            <input class="form-control" name="BlogTitle" type="text" placeholder="Enter Blog Title." required />
+            <br />
+            <label>Blog Author</label>
+            <br />
+            <br />
+            @Html.DropDownListFor(b => b.AuthorID, ((List<SelectListItem>)ViewBag.yazar), new { @class = "form-control", placeholder = "Choose Author" })
+            <br />
+            <label>Blog Category</label>
+            <br />
+            <br />
+            @Html.DropDownListFor(b => b.CategoryID, ((List<SelectListItem>)ViewBag.kategori), new { @class = "form-control", placeholder = "Choose Category",required="required" })
+            <br />
+            <label>Blog Content</label>
+            <br />
+            <br />
+            <textarea class="form-control" rows="2" cols="6" placeholder="Enter Blog Content." required></textarea>
+            <br />
+            <input type="submit" value="Save Blog" class="btn btn-primary"/>
+        }
+
+    </div>
+</div>

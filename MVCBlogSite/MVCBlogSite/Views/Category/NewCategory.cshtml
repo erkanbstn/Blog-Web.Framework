@@ -1,0 +1,22 @@
+﻿@model Varliklar.Somut.Category
+@{
+    ViewBag.Title = "NewCategory";
+    Layout = "~/Views/Shared/_Panel.cshtml";
+}
+
+<br />
+<h2 style="text-align:center;color:orange">Add New Category</h2>
+<br />
+<br />
+<div style="margin:45px">
+    @using (Html.BeginForm("NewCategory", "Category", FormMethod.Post))
+    {
+        <label style="color:peru">Category Name</label>
+        <br />
+        <br />
+        <input style="color:green" name="CategoryName" class="form-control" placeholder="Enter Category Name" />
+        <br />
+        <button type="submit" class="btn btn-primary">Add New Category</button>
+    }
+</div>
+
